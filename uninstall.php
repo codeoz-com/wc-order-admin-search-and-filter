@@ -22,7 +22,7 @@
  * @link       www.codeoz.com
  * @since      1.0.0
  *
- * @package    Wc_Order_Admin_Search_And_Filter
+ * @package    WC_Order_Admin_Search_And_Filter
  */
 
 // If uninstall not called from WordPress, then exit.

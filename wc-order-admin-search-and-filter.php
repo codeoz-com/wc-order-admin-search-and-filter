@@ -1,21 +1,14 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
  * @link              www.codeoz.com
  * @since             1.0.0
  * @package           WC_Order_Admin_Search_And_Filter
  *
  * @wordpress-plugin
  * Plugin Name:       WooCommerce Order Admin Search & Filters
- * Plugin URI:        www.codeoz.com/coz-aosf
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin URI:        www.codeoz.com/woocommerce_order_admin_search_and_filter
+ * Description:       Adds additional functionality to WooCommerce Order Admin, like custom filters & search, additional columns, and more..
  * Version:           1.0.0
  * Author:            codeOz
  * Author URI:        www.codeoz.com
@@ -39,30 +32,32 @@ define( 'WC_ORDER_ADMIN_SEARCH_AND_FILTER_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-coz-aosf-activator.php
+ * This action is documented in src/includes/class-coz-aosf-activator.php
  */
 function activate_wc_order_admin_search_and_filter() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-coz-aosf-activator.php';
-	Wc_Order_Admin_Search_And_Filter_Activator::activate();
+	require_once plugin_dir_path( __FILE__ ) . 'src/includes/class-coz-aosf-activator.php';
+	WC_Order_Admin_Search_And_Filter_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-coz-aosf-deactivator.php
+ * This action is documented in src/includes/class-coz-aosf-deactivator.php
  */
 function deactivate_wc_order_admin_search_and_filter() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-coz-aosf-deactivator.php';
-	Wc_Order_Admin_Search_And_Filter_Deactivator::deactivate();
+	require_once plugin_dir_path( __FILE__ ) . 'src/includes/class-coz-aosf-deactivator.php';
+	WC_Order_Admin_Search_And_Filter_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_wc_order_admin_search_and_filter' );
 register_deactivation_hook( __FILE__, 'deactivate_wc_order_admin_search_and_filter' );
 
+$fileval = __FILE__;
+
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-coz-aosf.php';
+require plugin_dir_path( __FILE__ ) . 'src/includes/class-coz-aosf.php';
 
 /**
  * Begins execution of the plugin.
