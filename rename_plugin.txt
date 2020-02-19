@@ -1,0 +1,50 @@
+
+
+Current values:
+
+plugin_text_name:       WooCommerce Order Admin Search & Filters
+
+plugin_name_lc:         wc-order-admin-search-and-filter
+plugin_url_lc:          woocommerce-order-admin-search-and-filter
+
+abbrv_lc:               oasf
+
+plugin_short_name_lc:   coz_oasf            = 'coz_' . $abbrv_lc
+singleton_class_name:   Codeoz_OASF         = 'Codeoz_' . upper($abbrv_lc)
+
+function_pre_lc:        zoasf_              = 'z' . $abbrv_lc . '_'
+variable_pre_lc:        zoasf-              = 'z' . $abbrv_lc . '_'
+
+class_pre:              ZOASF_              = 'Z' . upper($abbrv_lc) . '_'
+class_file_pre:         class-zoasf-        = 'class-z' . $abbrv_lc . '-'
+
+phpdoc_package_name:    cozOASF             = 'coz' . upper($abbrv_lc)
+
+Where:
+_lc = lowercase
+
+
+To rename plugin, search and replace following:
+
+
+---------- Filename ----------
+
+{plugin_name_lc}*  to  {plugin_name_lc_NEW}*
+
+{class_file_pre}*  to  {class_file_pre_NEW}*
+
+
+---------- File Content ----------
+
+z{abbrv_lowercase}_*        to  z{abbrv_lowercase_NEW}_*
+
+{plugin_name}               to  {plugin_name_NEW}
+
+{plugin_short_name_lc}      to  {plugin_short_name_lc_NEW}
+
+{plugin_short_name}         to  {plugin_short_name_NEW}
+
+{plugin_name_lc}            to {plugin_name_lc_NEW}
+
+Replace '-' with '_' in {plugin_name_lc}, THEN
+{plugin_name_lc}            to {plugin_name_lc_NEW}
