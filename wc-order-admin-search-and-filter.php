@@ -262,7 +262,7 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 				$this->adminObj = new ZOASF_Admin();
 			}
 			else {
-				require plugin_dir_path( __FILE__ ) . 'src/admin/class-zoasf-public.php';
+				require plugin_dir_path( __FILE__ ) . 'src/public/class-zoasf-public.php';
 				$this->publicObj = new ZOASF_Public();
 			}
 		}
