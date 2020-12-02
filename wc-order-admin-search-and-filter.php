@@ -131,7 +131,7 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 		 *
 		 * @staticvar object $instance
 		 * @return Codeoz_OASF The one true Codeoz_OASF
-		 * @see codeoz_oasf()
+		 * @see coz_oasf()
 		 */
 		public static function instance() {
 
@@ -158,7 +158,7 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 		 * A dummy constructor to prevent Codeoz_OASF from being loaded more than once.
 		 *
 		 * @see Codeoz_OASF::instance()
-		 * @see codeoz_oasf();
+		 * @see coz_oasf();
 		 */
 		private function __construct() { /* Do nothing here */
 		}
@@ -367,11 +367,11 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 	 * Use this function like you would a global variable, except without needing
 	 * to declare the global.
 	 *
-	 * Example: <?php $coz_oasf = codeoz_oasf(); ?>
+	 * Example: <?php $coz_oasf = coz_oasf(); ?>
 	 *
 	 * @return Codeoz_OASF The one true Codeoz_OASF Instance
 	 */
-	function codeoz_oasf() {
+	function coz_oasf() {
 		return Codeoz_OASF::instance();
 	}
 
@@ -384,7 +384,7 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 	if ( defined( 'COZ_OASF_LATE_LOAD' ) ) {
 		add_action( 'plugins_loaded', 'coz_oasf', (int) COZ_OASF_LATE_LOAD );
 	} else {
-		codeoz_oasf();
+		coz_oasf();
 	}
 
 endif; // class_exists check
