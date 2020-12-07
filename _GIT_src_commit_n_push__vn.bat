@@ -1,4 +1,5 @@
-:: Show summary of this GIT repository compared to remote
+
+:: Commit and push
 
 @echo off
 echo ========= GIT Commit and Push main Submodule ============
