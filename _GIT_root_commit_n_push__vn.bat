@@ -3,7 +3,10 @@
 
 @echo off
 echo ========= GIT Commit and Push this repository ============
+
+:: === Get commit message ===
 set /P msg="Enter Commit message: "
+
 
 :: === Commit ===
 :: --all = Automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.
@@ -22,6 +25,7 @@ choice /c ny /n
 if %errorlevel%==1 goto Finished
 ::echo Press any key to continue with PUSH, or CTR-C to terminate
 ::pause >null
+
 
 :: === Push ===
 :: --set-upstream = For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less git-pull[1] and other commands.
