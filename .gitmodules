@@ -1,6 +1,3 @@
-[submodule "src"]
-	path = src
-	url = https://github.com/codeoz-com/wc-order-admin-search-and-filter-module.git
 [submodule "coz-wplib/v1.0"]
 	path = coz-wplib/v1.0
 	url = https://github.com/codeoz-com/coz-wplib.git
