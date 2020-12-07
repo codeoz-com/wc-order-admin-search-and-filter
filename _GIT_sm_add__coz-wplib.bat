@@ -2,7 +2,7 @@
 :: Add "coz-wplib" submodule
 
 @echo off
-echo ========= GIT Push Submodule ============
+echo ========= GIT Add "coz-wplib" Submodule ============
 @echo on
 
 :: OPTION 1
