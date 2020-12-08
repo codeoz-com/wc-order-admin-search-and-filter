@@ -266,8 +266,8 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) {
 			$this->plugin_url = apply_filters( 'zoasf_plugin_dir_url', plugin_dir_url( $this->file ) );
 
 			// Source
-			$this->src_dir = apply_filters( 'zoasf_includes_dir', trailingslashit( $this->plugin_dir . 'src' ) );
-			$this->src_url = apply_filters( 'zoasf_includes_url', trailingslashit( $this->plugin_url . 'src' ) );
+			$this->src_dir = apply_filters( 'zoasf_includes_dir', trailingslashit( $this->plugin_dir . 'm-aosf' ) );
+			$this->src_url = apply_filters( 'zoasf_includes_url', trailingslashit( $this->plugin_url . 'm-aosf' ) );
 
 			// Languages
 			$this->lang_base = apply_filters( 'zoasf_lang_base', trailingslashit( $this->basepath . 'languages' ) );
@@ -277,10 +277,10 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) {
 			/** Admin or Public Object ********************************************/
 
 			if ( is_admin() ) {
-				require plugin_dir_path( __FILE__ ) . 'src/admin/class-zoasf-admin.php';
+				require plugin_dir_path( __FILE__ ) . 'm-aosf/admin/class-zoasf-admin.php';
 				$this->adminObj = new ZOASF_Admin();
 			} else {
-				require plugin_dir_path( __FILE__ ) . 'src/public/class-zoasf-public.php';
+				require plugin_dir_path( __FILE__ ) . 'm-aosf/public/class-zoasf-public.php';
 				$this->publicObj = new ZOASF_Public();
 			}
 		}

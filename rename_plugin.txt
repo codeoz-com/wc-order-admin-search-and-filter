@@ -9,6 +9,8 @@ plugin_url_lc:          woocommerce-order-admin-search-and-filter
 
 abbrv_lc:               oasf
 
+module_folder:          m-aosf
+
 plugin_short_name_lc:   coz_oasf            = 'coz_' . $abbrv_lc
 singleton_class_name:   Codeoz_OASF         = 'Codeoz_' . upper($abbrv_lc)
 
