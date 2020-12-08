@@ -23,6 +23,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+use \coz\wplib1 as cozwpl;
+
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
@@ -30,7 +32,24 @@ if ( ! defined( 'WPINC' ) ) {
  */
 define( 'WC_ORDER_ADMIN_SEARCH_AND_FILTER_VERSION', '1.0.0-Alpha1' );
 
-if ( ! class_exists( 'Codeoz_OASF' ) ) :
+
+// TEST TEST
+/**
+ * The directory containing the "COZ-WPLIB", for example "coz-wplib0"
+ */
+const COZ_WPLIB_DIR = 'coz-wplib0';
+
+/**
+ * Plugin dir path, with trailing file separator. Examples:
+ * On localhost: C:\xampp\htdocs\u99tech\wp-content\plugins\modtronix-audshop/coz-wplib0/
+ */
+define('COZ_WPLIB_PATH', plugin_dir_path(__FILE__) . '/' . COZ_WPLIB_DIR . '/');
+
+/** The plugin URL, for example "https://localhost/u99tech/wp-content/plugins/modtronix-audshop/coz-wplib0/" */
+define('COZ_WPLIB_URL', plugin_dir_url(__FILE__) . '/' . COZ_WPLIB_DIR . '/');
+
+
+if ( ! class_exists( 'Codeoz_OASF' ) ) {
 
 	/**
 	 * Main "WooCommerce Order Admin Search & Filters" Class
@@ -48,7 +67,7 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 		/** @var array Storage of options not in the database */
 		public $not_options = array();
 
-		/** @var ZOASF_Admin Main Admin object and data	 */
+		/** @var ZOASF_Admin Main Admin object and data */
 		public $adminObj = null;
 
 		/** @var ZOASF_Public Main Public object and data */
@@ -229,7 +248,7 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 
 			/** Versions **********************************************************/
 
-			$this->version = '1.0.0';
+			$this->version    = '1.0.0';
 			$this->db_version = '1';
 
 			/** Paths *************************************************************/
@@ -257,11 +276,10 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 
 			/** Admin or Public Object ********************************************/
 
-			if (is_admin()) {
+			if ( is_admin() ) {
 				require plugin_dir_path( __FILE__ ) . 'src/admin/class-zoasf-admin.php';
 				$this->adminObj = new ZOASF_Admin();
-			}
-			else {
+			} else {
 				require plugin_dir_path( __FILE__ ) . 'src/public/class-zoasf-public.php';
 				$this->publicObj = new ZOASF_Public();
 			}
@@ -308,7 +326,6 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 
 			/** Internationalization **********************************************/
 			//require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-zoasf-i18n.php';
-
 
 
 //			/** Hooks *************************************************************/
@@ -387,4 +404,4 @@ if ( ! class_exists( 'Codeoz_OASF' ) ) :
 		coz_oasf();
 	}
 
-endif; // class_exists check
+}   // class_exists check

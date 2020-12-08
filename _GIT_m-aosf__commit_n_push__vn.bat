@@ -4,7 +4,7 @@
 @echo off
 echo ========= GIT Commit and Push main Submodule ============
 set /P msg="Enter Commit message: "
-cd coz-wplib
+cd m-aosf
 
 :: === Commit ===
 :: --all = Automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.

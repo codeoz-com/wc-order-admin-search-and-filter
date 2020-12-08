@@ -5,3 +5,7 @@
 [submodule "coz-wplib0"]
 	path = coz-wplib0
 	url = https://github.com/codeoz-com/coz-wplib.git
+[submodule "m-aosf"]
+	path = m-aosf
+	url = https://github.com/codeoz-com/wc-order-admin-search-and-filter-module.git
+	branch = release/v1.0
